@@ -1,13 +1,21 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
-// test('First Test', async ({ page }) => {
-//   //Writing testing code here
-//   await page.goto('https://playwright.dev/');
-//   const title = page.locator('.navbar__inner .navbar__title');
-//   await expect(title).toHaveText('Playwright');
-// });
+test('First Test', async ({ page }) => {
+  //Writing testing code here
+  await page.goto('https://playwright.dev/');
+  const title = page.locator('.navbar__inner .navbar__title');
+  await expect(title).toHaveText('Playwright');
+});
 
 test("Simple click test", async ({ page }) => {
+  await page.goto("https://the-internet.herokuapp.com/");
+  const element = page.locator("text=Add/Remove Elements");
+  const addElement = page.locator("text=Add Element");
+  await element.click();
+  await addElement.click();
+})
+
+test.only("Duplicate Test", async ({ page }) => {
   await page.goto("https://the-internet.herokuapp.com/");
   const element = page.locator("text=Add/Remove Elements");
   const addElement = page.locator("text=Add Element");

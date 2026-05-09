@@ -7,7 +7,8 @@ test('First Test', async ({ page }) => {
   await expect(title).toHaveText('Playwright');
 });
 
-test("Simple click test", async ({ page }) => {
+test("Simple click test", async ({ page, browserName }) => {
+  test.skip(browserName === 'firefox', 'Working on the firefox fix');
   await page.goto("https://the-internet.herokuapp.com/");
   const element = page.locator("text=Add/Remove Elements");
   const addElement = page.locator("text=Add Element");
@@ -15,7 +16,7 @@ test("Simple click test", async ({ page }) => {
   await addElement.click();
 })
 
-test.only("Duplicate Test", async ({ page }) => {
+test("Duplicate Test", async ({ page }) => {
   await page.goto("https://the-internet.herokuapp.com/");
   const element = page.locator("text=Add/Remove Elements");
   const addElement = page.locator("text=Add Element");

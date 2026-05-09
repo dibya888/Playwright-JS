@@ -11,5 +11,5 @@ test("Simple click test", async ({ page }) => {
   await page.goto("https://the-internet.herokuapp.com/");
   await page.locator("text=Add/Remove Elements").click();
   await page.pause();
-  await page.locator("text=Add Element").click();
+  await page.click("text=Add Element");
 })

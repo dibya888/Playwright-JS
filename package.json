@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Learning Playwright.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:chrome": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:safari": "npx playwright test --project=webkit"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dibya888/Playwright.git"

@@ -1,2 +1,2 @@
 # Playwright
-Learning Playwright.
+Learning Playwright with JavaScript.

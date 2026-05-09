@@ -9,7 +9,8 @@ import { test, expect } from '@playwright/test';
 
 test("Simple click test", async ({ page }) => {
   await page.goto("https://the-internet.herokuapp.com/");
-  await page.locator("text=Add/Remove Elements").click();
-  await page.pause();
-  await page.click("text=Add Element");
+  const element = page.locator("text=Add/Remove Elements");
+  const addElement = page.locator("text=Add Element");
+  await element.click();
+  await addElement.click();
 })

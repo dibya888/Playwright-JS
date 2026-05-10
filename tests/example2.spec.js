@@ -6,7 +6,7 @@ test.describe("Example", () => {
     await page.goto("https://demoqa.com/text-box");
     await page.locator('#userName').type('Capt.MacTavish');
     await page.locator("[placeholder='name@example.com']").type('captmactavish@sas.com');
-    await page.locator('#currentAddress').type('Herefordshire, England');
+    await page.locator('//textarea[@placeholder="Current Address"]').type('Herefordshire, England');
     await page.locator('#permanentAddress').type('Herefordshire, England');
     await page.locator('button:has-text("Submit")').click();
     await page.pause();
